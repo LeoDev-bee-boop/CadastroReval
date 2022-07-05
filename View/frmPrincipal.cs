@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CadastroReval.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,10 @@ namespace CadastroReval
             InitializeComponent();
         }
 
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGerenciadorContato gerenciador = new frmGerenciadorContato();
+            gerenciador.Show();
+        }
     }
 }
