@@ -39,10 +39,10 @@ namespace CadastroReval.View
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 53);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 43);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 385);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 395);
             this.dataGridView1.TabIndex = 0;
             // 
             // butRefresh
@@ -52,9 +52,9 @@ namespace CadastroReval.View
             this.butRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butRefresh.FlatAppearance.BorderSize = 0;
             this.butRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butRefresh.Location = new System.Drawing.Point(753, 12);
+            this.butRefresh.Location = new System.Drawing.Point(763, 12);
             this.butRefresh.Name = "butRefresh";
-            this.butRefresh.Size = new System.Drawing.Size(35, 35);
+            this.butRefresh.Size = new System.Drawing.Size(25, 25);
             this.butRefresh.TabIndex = 1;
             this.butRefresh.UseVisualStyleBackColor = false;
             // 
@@ -65,9 +65,9 @@ namespace CadastroReval.View
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(712, 12);
+            this.button1.Location = new System.Drawing.Point(732, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 35);
+            this.button1.Size = new System.Drawing.Size(25, 25);
             this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = false;
             // 
