@@ -140,7 +140,6 @@ namespace CadastroReval.View
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastraAtualizaCliente";
-            this.Text = "Nome do pai:";
             this.ResumeLayout(false);
             this.PerformLayout();
 
