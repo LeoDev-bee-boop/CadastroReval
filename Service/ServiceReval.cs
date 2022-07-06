@@ -19,7 +19,7 @@ namespace CadastroReval.Service
             _cmd.CommandText = "";
 
             //parametros
-            _cmd.Parameters.AddWithValue("",);
+            //_cmd.Parameters.AddWithValue("",);
 
             try
             {
