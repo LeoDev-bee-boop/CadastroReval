@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CadastroReval.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace CadastroReval.View
 {
     public partial class frmCadastraAtualizaCliente : Form
     {
+        Cliente _cliente = new Cliente();
+
+        
         public frmCadastraAtualizaCliente()
         {
             InitializeComponent();

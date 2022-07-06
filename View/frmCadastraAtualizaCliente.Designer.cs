@@ -50,7 +50,7 @@ namespace CadastroReval.View
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtObs = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
@@ -223,15 +223,15 @@ namespace CadastroReval.View
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 15);
             this.label3.TabIndex = 24;
-            this.label3.Text = "Onservação:";
+            this.label3.Text = "Observação:";
             // 
-            // textBox2
+            // txtObs
             // 
-            this.textBox2.Location = new System.Drawing.Point(133, 153);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(486, 63);
-            this.textBox2.TabIndex = 25;
+            this.txtObs.Location = new System.Drawing.Point(133, 153);
+            this.txtObs.Multiline = true;
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(486, 63);
+            this.txtObs.TabIndex = 25;
             // 
             // btnGravar
             // 
@@ -291,7 +291,7 @@ namespace CadastroReval.View
             this.Controls.Add(this.mtbCPF);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGravar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtObs);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.txtCidade);
@@ -347,7 +347,7 @@ namespace CadastroReval.View
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtObs;
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.MaskedTextBox mtbCPF;
