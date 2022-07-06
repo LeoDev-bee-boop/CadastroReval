@@ -39,8 +39,6 @@ namespace CadastroReval.View
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.mtbRG = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -48,7 +46,6 @@ namespace CadastroReval.View
             this.label12 = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtObs = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
@@ -56,6 +53,7 @@ namespace CadastroReval.View
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.mtbCEP = new System.Windows.Forms.MaskedTextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -133,23 +131,6 @@ namespace CadastroReval.View
             this.mtbTelefone.Size = new System.Drawing.Size(82, 23);
             this.mtbTelefone.TabIndex = 13;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(327, 38);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 15);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Estado Civil";
-            // 
-            // cbEstadoCivil
-            // 
-            this.cbEstadoCivil.FormattingEnabled = true;
-            this.cbEstadoCivil.Location = new System.Drawing.Point(401, 35);
-            this.cbEstadoCivil.Name = "cbEstadoCivil";
-            this.cbEstadoCivil.Size = new System.Drawing.Size(218, 23);
-            this.cbEstadoCivil.TabIndex = 15;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -207,14 +188,6 @@ namespace CadastroReval.View
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(126, 23);
             this.txtCidade.TabIndex = 22;
-            // 
-            // cbEstado
-            // 
-            this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(495, 123);
-            this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(124, 23);
-            this.cbEstado.TabIndex = 23;
             // 
             // label3
             // 
@@ -281,11 +254,19 @@ namespace CadastroReval.View
             this.mtbCEP.Size = new System.Drawing.Size(58, 23);
             this.mtbCEP.TabIndex = 30;
             // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(493, 123);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(126, 23);
+            this.txtEstado.TabIndex = 31;
+            // 
             // frmCadastraAtualizaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 252);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.mtbCEP);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.mtbCPF);
@@ -293,7 +274,6 @@ namespace CadastroReval.View
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.txtObs);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.label12);
@@ -301,8 +281,6 @@ namespace CadastroReval.View
             this.Controls.Add(this.label10);
             this.Controls.Add(this.mtbRG);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.cbEstadoCivil);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.mtbTelefone);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtEmail);
@@ -336,8 +314,6 @@ namespace CadastroReval.View
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MaskedTextBox mtbTelefone;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbEstadoCivil;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox mtbRG;
         private System.Windows.Forms.Label label10;
@@ -345,7 +321,6 @@ namespace CadastroReval.View
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtObs;
         private System.Windows.Forms.Button btnGravar;
@@ -353,5 +328,6 @@ namespace CadastroReval.View
         private System.Windows.Forms.MaskedTextBox mtbCPF;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox mtbCEP;
+        private System.Windows.Forms.TextBox txtEstado;
     }
 }

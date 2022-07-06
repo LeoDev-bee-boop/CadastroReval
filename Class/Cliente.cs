@@ -8,10 +8,10 @@ namespace CadastroReval.Class
 {
     public class Cliente
     {
+        public int      IdCliente       { get; set; }
         public string   NomeCliente     { get; set; }
         public string   CPF             { get; set; }
         public string   RG              { get; set; }
-        public string   EstadoCivil     { get; set; }
         public string   Email           { get; set; }
         public DateTime DataNascimento  { get; set; }
         public string   CEP             { get; set; }
