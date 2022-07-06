@@ -16,5 +16,11 @@ namespace CadastroReval.View
         {
             InitializeComponent();
         }
+
+        private void butRefresh_Click(object sender, EventArgs e)
+        {
+            frmCadastraAtualizaCliente cadastra = new frmCadastraAtualizaCliente();
+            cadastra.ShowDialog();
+        }
     }
 }

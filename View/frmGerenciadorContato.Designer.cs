@@ -38,6 +38,9 @@ namespace CadastroReval.View
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 43);
             this.dataGridView1.Name = "dataGridView1";
@@ -47,6 +50,7 @@ namespace CadastroReval.View
             // 
             // butRefresh
             // 
+            this.butRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.butRefresh.BackColor = System.Drawing.Color.Transparent;
             this.butRefresh.BackgroundImage = global::CadastroReval.Properties.Resources.adicionar;
             this.butRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -57,9 +61,11 @@ namespace CadastroReval.View
             this.butRefresh.Size = new System.Drawing.Size(25, 25);
             this.butRefresh.TabIndex = 1;
             this.butRefresh.UseVisualStyleBackColor = false;
+            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = global::CadastroReval.Properties.Resources.refresh;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -81,6 +87,7 @@ namespace CadastroReval.View
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGerenciadorContato";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
