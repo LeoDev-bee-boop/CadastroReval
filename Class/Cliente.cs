@@ -19,6 +19,6 @@ namespace CadastroReval.Class
         public string   Bairro          { get; set; }
         public string   Cidade          { get; set; }
         public string   Estado          { get; set; }
-        public string   Observação      { get; set; }
+        public string   Observacao      { get; set; }
     }
 }

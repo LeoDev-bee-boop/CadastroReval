@@ -1,4 +1,5 @@
-﻿using CadastroReval.Class;
+﻿using CadastroReval.Business;
+using CadastroReval.Class;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace CadastroReval.View
     public partial class frmCadastraAtualizaCliente : Form
     {
         Cliente _cliente = new Cliente();
-
+        BusinessReval _business = new BusinessReval();
         
         public frmCadastraAtualizaCliente()
         {
@@ -47,11 +48,24 @@ namespace CadastroReval.View
                 return;
 
             atribuiDadosCliente();
+
+            _business.cadastraCliente(_cliente);
         }
 
         private void atribuiDadosCliente()
         {
-
+            _cliente.NomeCliente = txtNomeCliente.Text;
+            _cliente.CPF = mtbCPF.Text;
+            _cliente.RG = mtbRG.Text;
+            _cliente.EstadoCivil = cbEstadoCivil.Text;
+            _cliente.Email = txtEmail.Text;
+            _cliente.DataNascimento = dtpNascimento.MinDate;
+            _cliente.CEP = mtbCEP.Text;
+            _cliente.Telefone = mtbTelefone.Text;
+            _cliente.Bairro = txtBairro.Text;
+            _cliente.Cidade = txtCidade.Text;
+            _cliente.Estado = cbEstado.Text;
+            _cliente.Observacao = txtObs.Text;
         }
 
         private bool validaDadosCliente()
