@@ -293,6 +293,7 @@ namespace CadastroReval.View
             this.MinimizeBox = false;
             this.Name = "frmCadastraAtualizaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de clientes";
             this.ResumeLayout(false);
             this.PerformLayout();
 
