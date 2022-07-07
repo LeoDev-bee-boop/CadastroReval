@@ -117,7 +117,7 @@ namespace CadastroReval.View
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(318, 97);
+            this.label7.Location = new System.Drawing.Point(328, 97);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 15);
             this.label7.TabIndex = 12;
@@ -125,16 +125,16 @@ namespace CadastroReval.View
             // 
             // mtbTelefone
             // 
-            this.mtbTelefone.Location = new System.Drawing.Point(378, 94);
+            this.mtbTelefone.Location = new System.Drawing.Point(388, 94);
             this.mtbTelefone.Mask = "(00) 00000-0000";
             this.mtbTelefone.Name = "mtbTelefone";
-            this.mtbTelefone.Size = new System.Drawing.Size(82, 23);
+            this.mtbTelefone.Size = new System.Drawing.Size(89, 23);
             this.mtbTelefone.TabIndex = 13;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(220, 38);
+            this.label9.Location = new System.Drawing.Point(224, 38);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(25, 15);
             this.label9.TabIndex = 16;
@@ -142,10 +142,10 @@ namespace CadastroReval.View
             // 
             // mtbRG
             // 
-            this.mtbRG.Location = new System.Drawing.Point(251, 35);
+            this.mtbRG.Location = new System.Drawing.Point(255, 35);
             this.mtbRG.Mask = "00,000,000-0";
             this.mtbRG.Name = "mtbRG";
-            this.mtbRG.Size = new System.Drawing.Size(70, 23);
+            this.mtbRG.Size = new System.Drawing.Size(77, 23);
             this.mtbRG.TabIndex = 17;
             // 
             // label10
@@ -229,7 +229,7 @@ namespace CadastroReval.View
             this.mtbCPF.Location = new System.Drawing.Point(133, 35);
             this.mtbCPF.Mask = "000,000,000-00";
             this.mtbCPF.Name = "mtbCPF";
-            this.mtbCPF.Size = new System.Drawing.Size(81, 23);
+            this.mtbCPF.Size = new System.Drawing.Size(85, 23);
             this.mtbCPF.TabIndex = 28;
             // 
             // label4
@@ -246,7 +246,7 @@ namespace CadastroReval.View
             this.mtbCEP.Location = new System.Drawing.Point(254, 94);
             this.mtbCEP.Mask = "00000-000";
             this.mtbCEP.Name = "mtbCEP";
-            this.mtbCEP.Size = new System.Drawing.Size(58, 23);
+            this.mtbCEP.Size = new System.Drawing.Size(68, 23);
             this.mtbCEP.TabIndex = 30;
             // 
             // txtEstado
