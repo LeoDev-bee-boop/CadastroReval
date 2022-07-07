@@ -226,7 +226,7 @@ namespace CadastroReval.View
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(67, 23);
             this.btnCancelar.TabIndex = 27;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Text = "Excluir";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // mtbCPF

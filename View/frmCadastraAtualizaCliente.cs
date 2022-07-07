@@ -39,7 +39,11 @@ namespace CadastroReval.View
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            gravarCliente(); 
+            gravarCliente();
+
+            MessageBox.Show("Cliente salvo com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            this.Close();
         }
 
         private void gravarCliente()
