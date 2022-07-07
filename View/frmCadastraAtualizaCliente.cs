@@ -40,10 +40,6 @@ namespace CadastroReval.View
         private void btnGravar_Click(object sender, EventArgs e)
         {
             gravarCliente();
-
-            MessageBox.Show("Cliente salvo com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            this.Close();
         }
 
         private void gravarCliente()
@@ -54,6 +50,10 @@ namespace CadastroReval.View
             atribuiDadosCliente();
 
             _business.cadastraCliente(_cliente);
+
+            MessageBox.Show("Cliente salvo com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            this.Close();
         }
 
         private void atribuiDadosCliente()
@@ -73,37 +73,37 @@ namespace CadastroReval.View
 
         private bool validaDadosCliente()
         {
-            if (string.IsNullOrEmpty(txtNomeCliente.Text))
+            if (string.IsNullOrEmpty(txtNomeCliente.Text.Trim()))
             {
                 MessageBox.Show("Insira o nome do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (string.IsNullOrEmpty(mtbCPF.Text))
+            if (string.IsNullOrEmpty(mtbCPF.Text.Trim()))
             {
                 MessageBox.Show("Insira o CPF do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (string.IsNullOrEmpty(txtEmail.Text))
+            if (string.IsNullOrEmpty(txtEmail.Text.Trim()))
             {
                 MessageBox.Show("Insira o email do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (string.IsNullOrEmpty(mtbCEP.Text))
+            if (string.IsNullOrEmpty(mtbCEP.Text.Trim()))
             {
                 MessageBox.Show("Insira o CEP do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (string.IsNullOrEmpty(mtbTelefone.Text))
+            if (string.IsNullOrEmpty(mtbTelefone.Text.Trim()))
             {
                 MessageBox.Show("Insira o telefone do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (string.IsNullOrEmpty(txtBairro.Text))
+            if (string.IsNullOrEmpty(txtBairro.Text.Trim()))
             {
                 MessageBox.Show("Insira o bairro do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (string.IsNullOrEmpty(txtCidade.Text))
+            if (string.IsNullOrEmpty(txtCidade.Text.Trim()))
             {
                 MessageBox.Show("Insira a cidade do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;

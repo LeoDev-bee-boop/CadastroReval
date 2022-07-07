@@ -49,11 +49,11 @@ namespace CadastroReval.View
             this.label3 = new System.Windows.Forms.Label();
             this.txtObs = new System.Windows.Forms.TextBox();
             this.btnGravar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.mtbCPF = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.mtbCEP = new System.Windows.Forms.MaskedTextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -203,32 +203,26 @@ namespace CadastroReval.View
             this.txtObs.Location = new System.Drawing.Point(133, 153);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
-            this.txtObs.Size = new System.Drawing.Size(486, 63);
+            this.txtObs.Size = new System.Drawing.Size(486, 58);
             this.txtObs.TabIndex = 25;
             // 
             // btnGravar
             // 
-            this.btnGravar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGravar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(95)))), ((int)(((byte)(135)))));
             this.btnGravar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnGravar.Location = new System.Drawing.Point(552, 222);
+            this.btnGravar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(95)))), ((int)(((byte)(135)))));
+            this.btnGravar.FlatAppearance.BorderSize = 0;
+            this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGravar.Image = global::CadastroReval.Properties.Resources.adicionar_16x16;
+            this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGravar.Location = new System.Drawing.Point(552, 217);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(67, 23);
+            this.btnGravar.Size = new System.Drawing.Size(67, 28);
             this.btnGravar.TabIndex = 26;
             this.btnGravar.Text = "Gravar";
+            this.btnGravar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGravar.UseVisualStyleBackColor = false;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCancelar.Location = new System.Drawing.Point(479, 222);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(67, 23);
-            this.btnCancelar.TabIndex = 27;
-            this.btnCancelar.Text = "Excluir";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Visible = false;
             // 
             // mtbCPF
             // 
@@ -262,16 +256,33 @@ namespace CadastroReval.View
             this.txtEstado.Size = new System.Drawing.Size(126, 23);
             this.txtEstado.TabIndex = 31;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(95)))), ((int)(((byte)(135)))));
+            this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(95)))), ((int)(((byte)(135)))));
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Image = global::CadastroReval.Properties.Resources.remover;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.Location = new System.Drawing.Point(479, 217);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(67, 28);
+            this.btnExcluir.TabIndex = 32;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            // 
             // frmCadastraAtualizaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 252);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.mtbCEP);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.mtbCPF);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.txtObs);
             this.Controls.Add(this.label3);
@@ -325,10 +336,10 @@ namespace CadastroReval.View
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtObs;
         private System.Windows.Forms.Button btnGravar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.MaskedTextBox mtbCPF;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox mtbCEP;
         private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }
