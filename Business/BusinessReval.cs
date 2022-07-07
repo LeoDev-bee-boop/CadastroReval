@@ -24,5 +24,17 @@ namespace CadastroReval.Business
                 throw;
             }
         }
+
+        public List<Cliente> carregaGridCliente()
+        {
+            try
+            {
+                return _service.carregaGridCliente();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao executar consulta: " + ex);
+            }
+        }
     }
 }

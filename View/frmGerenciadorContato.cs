@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CadastroReval.Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace CadastroReval.View
 {
     public partial class frmGerenciadorContato : Form
     {
+        BusinessReval _business = new BusinessReval();
+
+
         public frmGerenciadorContato()
         {
             InitializeComponent();
@@ -21,6 +25,27 @@ namespace CadastroReval.View
         {
             frmCadastraAtualizaCliente cadastra = new frmCadastraAtualizaCliente();
             cadastra.ShowDialog();
+        }
+
+        private void frmGerenciadorContato_Load(object sender, EventArgs e)
+        {
+            carregaGrid();
+        }
+
+        private void carregaGrid()
+        {
+            dgvCliente.AutoGenerateColumns = false;
+            dgvCliente.DataSource = _business.carregaGridCliente();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            carregaGrid();
         }
     }
 }

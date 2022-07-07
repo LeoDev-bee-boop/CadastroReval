@@ -12,6 +12,7 @@ namespace CadastroReval.Service
     {
         Conexao _con = new Conexao();
         SqlCommand _cmd = new SqlCommand();
+        SqlDataReader _reader;
 
         public void cadastraCliente(Cliente _cliente)
         {
@@ -37,12 +38,58 @@ namespace CadastroReval.Service
                 //Conecar com o banco
                 _cmd.Connection = _con.conectar();
                 //Executando consulta
-                _cmd.ExecuteNonQuery();
+                _reader = _cmd.ExecuteReader();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                throw new Exception("Erro ao executar consulta: " + ex);
+            }
+            finally
+            {
+                //desconectando
+                _con.desconectar();
+            }
+        }
 
-                throw;
+        public List<Cliente> carregaGridCliente()
+        {
+            var lista = new List<Cliente>();
+            
+            //Comando sql
+            _cmd.CommandText = @"
+                                SELECT 
+                                ID_CLIENTE AS ID,
+                                NOME_CLIENTE AS CLIENTE,
+                                EMAIL,
+                                TELEFONE
+                                FROM CLIENTE WITH (NOLOCK)
+                                ORDER BY CLIENTE";
+
+            try
+            {
+                //Conecar com o banco
+                _cmd.Connection = _con.conectar();
+                //Executando consulta
+                _reader = _cmd.ExecuteReader();
+
+                while (_reader.Read())
+                {
+                    var cliente = new Cliente
+                    {
+                        IdCliente = Convert.ToInt32(_reader["ID"]),
+                        NomeCliente = Convert.ToString(_reader["CLIENTE"]),
+                        Email = Convert.ToString(_reader["EMAIL"]),
+                        Telefone = Convert.ToString(_reader["TELEFONE"])
+                    };
+
+                    lista.Add(cliente);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao executar consulta: " + ex);
             }
             finally
             {
