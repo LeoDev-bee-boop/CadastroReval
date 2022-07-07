@@ -44,7 +44,15 @@ namespace CadastroReval.View
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            gravarCliente();
+            if(_idCliente == 0)
+            {
+                gravarCliente();
+            }
+            else
+            {
+                atualizaCliente();
+            }
+                
         }
 
         private void gravarCliente()
@@ -57,6 +65,20 @@ namespace CadastroReval.View
             _business.cadastraCliente(_cliente);
 
             MessageBox.Show("Cliente salvo com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            this.Close();
+        }
+
+        private void atualizaCliente()
+        {
+            if (validaDadosCliente() == false)
+                return;
+
+            atribuiDadosCliente();
+
+            _business.atualizaCliente(_cliente);
+
+            MessageBox.Show("Cliente atualizado com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             this.Close();
         }

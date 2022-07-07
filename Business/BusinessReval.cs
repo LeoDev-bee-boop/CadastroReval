@@ -25,6 +25,18 @@ namespace CadastroReval.Business
             }
         }
 
+        public void atualizaCliente(Cliente _cliente)
+        {
+            try
+            {
+                _service.atualizaCliente(_cliente);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao executar método" + ex);
+            }
+        }
+
         public List<Cliente> carregaGridCliente()
         {
             try

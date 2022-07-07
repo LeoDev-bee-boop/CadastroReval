@@ -51,6 +51,58 @@ namespace CadastroReval.Service
             }
         }
 
+        public void atualizaCliente(Cliente _cliente)
+        {
+            //Comando sql
+            _cmd.CommandText = @"
+                                UPDATE CLIENTE 
+                                SET 
+                                    NOME_CLIENTE = @NOME, 
+                                    CPF = @CPF, 
+                                    RG = @RG, 
+                                    EMAIL = @EMAIL, 
+                                    DATA_NASCIMENTO = @DATA_NASCIMENTO, 
+                                    CEP = @CEP, 
+                                    TELEFONE = @TELEFONE, 
+                                    BAIRRO = @BAIRRO, 
+                                    CIDADE = @CIDADE, 
+                                    ESTADO = @ESTADO, 
+                                    OBSERVACAO = @OBSERVACAO
+                                WHERE
+                                    ID_CLIENTE = @ID_CLIENTE";
+
+            //Adicionado parametros
+            _cmd.Parameters.AddWithValue("@NOME", _cliente.NomeCliente);
+            _cmd.Parameters.AddWithValue("@CPF", _cliente.CPF);
+            _cmd.Parameters.AddWithValue("@RG", _cliente.RG);
+            _cmd.Parameters.AddWithValue("@EMAIL", _cliente.Email);
+            _cmd.Parameters.AddWithValue("@DATA_NASCIMENTO", _cliente.DataNascimento.ToString());
+            _cmd.Parameters.AddWithValue("@CEP", _cliente.CEP);
+            _cmd.Parameters.AddWithValue("@TELEFONE", _cliente.Telefone);
+            _cmd.Parameters.AddWithValue("@BAIRRO", _cliente.Bairro);
+            _cmd.Parameters.AddWithValue("@CIDADE", _cliente.Cidade);
+            _cmd.Parameters.AddWithValue("@ESTADO", _cliente.Estado);
+            _cmd.Parameters.AddWithValue("@OBSERVACAO", _cliente.Observacao);
+            _cmd.Parameters.AddWithValue("@ID_CLIENTE", _cliente.IdCliente);
+
+            try
+            {
+                //Conecar com o banco
+                _cmd.Connection = _con.conectar();
+                //Executando consulta
+                _cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao executar consulta: " + ex);
+            }
+            finally
+            {
+                //desconectando
+                _con.desconectar();
+            }
+        }
+
         public List<Cliente> carregaGridCliente()
         {
             var lista = new List<Cliente>();
@@ -58,12 +110,13 @@ namespace CadastroReval.Service
             //Comando sql
             _cmd.CommandText = @"
                                 SELECT 
-                                ID_CLIENTE AS ID,
-                                NOME_CLIENTE AS CLIENTE,
-                                EMAIL,
-                                TELEFONE
+                                    ID_CLIENTE AS ID,
+                                    NOME_CLIENTE AS CLIENTE,
+                                    EMAIL,
+                                    TELEFONE
                                 FROM CLIENTE WITH (NOLOCK)
-                                ORDER BY CLIENTE";
+                                ORDER BY 
+                                    CLIENTE";
 
             try
             {
@@ -105,21 +158,23 @@ namespace CadastroReval.Service
             //Comando sql
             _cmd.CommandText = @"
                                 SELECT 
-                                ID_CLIENTE AS ID,
-                                NOME_CLIENTE AS CLIENTE,
-                                CPF,
-                                RG,
-                                EMAIL,
-                                DATA_NASCIMENTO,
-                                CEP,
-                                TELEFONE,
-                                BAIRRO,
-                                CIDADE,
-                                ESTADO,
-                                OBSERVACAO
+                                    ID_CLIENTE AS ID,
+                                    NOME_CLIENTE AS CLIENTE,
+                                    CPF,
+                                    RG,
+                                    EMAIL,
+                                    DATA_NASCIMENTO,
+                                    CEP,
+                                    TELEFONE,
+                                    BAIRRO,
+                                    CIDADE,
+                                    ESTADO,
+                                    OBSERVACAO
                                 FROM CLIENTE WITH (NOLOCK)
-                                WHERE ID_CLIENTE = @ID
-                                ORDER BY CLIENTE";
+                                WHERE 
+                                    ID_CLIENTE = @ID
+                                ORDER BY 
+                                    CLIENTE";
             
             _cmd.Parameters.AddWithValue("@ID", idCliente);
 
