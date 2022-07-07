@@ -39,7 +39,7 @@ namespace CadastroReval.View
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            gravarCliente();
+            gravarCliente(); 
         }
 
         private void gravarCliente()
@@ -102,16 +102,6 @@ namespace CadastroReval.View
             if (string.IsNullOrEmpty(txtCidade.Text))
             {
                 MessageBox.Show("Insira a cidade do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (cbEstado.SelectedIndex == 0)
-            {
-                MessageBox.Show("Insira o estado do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (cbEstadoCivil.SelectedIndex == 0)
-            {
-                MessageBox.Show("Insira o estado civil do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 

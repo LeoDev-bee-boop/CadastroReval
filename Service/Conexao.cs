@@ -14,7 +14,7 @@ namespace CadastroReval.Service
         //Construtor
         public Conexao()
         {
-            _con.ConnectionString = "Server=localhost;Database=REVAL;Trusted_Connection=True;";
+            _con.ConnectionString = @"Server=localhost;Database=REVAL;Trusted_Connection=True";
         }
 
         //Metodo Conextar
