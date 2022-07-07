@@ -215,9 +215,9 @@ namespace CadastroReval.View
             this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGravar.Image = global::CadastroReval.Properties.Resources.adicionar_16x16;
             this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGravar.Location = new System.Drawing.Point(552, 217);
+            this.btnGravar.Location = new System.Drawing.Point(541, 217);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(67, 28);
+            this.btnGravar.Size = new System.Drawing.Size(78, 28);
             this.btnGravar.TabIndex = 26;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -265,9 +265,9 @@ namespace CadastroReval.View
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Image = global::CadastroReval.Properties.Resources.remover;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.Location = new System.Drawing.Point(479, 217);
+            this.btnExcluir.Location = new System.Drawing.Point(457, 217);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(67, 28);
+            this.btnExcluir.Size = new System.Drawing.Size(78, 28);
             this.btnExcluir.TabIndex = 32;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

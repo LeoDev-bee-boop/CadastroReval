@@ -130,6 +130,7 @@ namespace CadastroReval.View
             this.Controls.Add(this.butRefresh);
             this.Controls.Add(this.dgvCliente);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(300, 160);
             this.Name = "frmGerenciadorContato";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciador de clientes";

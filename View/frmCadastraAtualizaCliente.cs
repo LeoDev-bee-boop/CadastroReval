@@ -38,6 +38,8 @@ namespace CadastroReval.View
         private void prepararAtualizarForm()
         {
             _cliente = _business.buscaCliente(_idCliente);
+
+            btnGravar.Text = "Atualizar";
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
