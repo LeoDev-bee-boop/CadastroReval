@@ -60,6 +60,7 @@ namespace CadastroReval.View
             this.dgvCliente.RowTemplate.Height = 25;
             this.dgvCliente.Size = new System.Drawing.Size(776, 395);
             this.dgvCliente.TabIndex = 0;
+            this.dgvCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellDoubleClick);
             // 
             // colID
             // 

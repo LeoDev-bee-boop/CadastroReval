@@ -14,27 +14,30 @@ namespace CadastroReval.View
 {
     public partial class frmCadastraAtualizaCliente : Form
     {
+        int _idCliente;
         Cliente _cliente = new Cliente();
         BusinessReval _business = new BusinessReval();
         
-        public frmCadastraAtualizaCliente()
+        public frmCadastraAtualizaCliente(int idCliente = 0)
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             
+            _idCliente = idCliente;
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void frmCadastraAtualizaCliente_Load(object sender, EventArgs e)
         {
+            if(_idCliente != 0)
+            {
+                prepararAtualizarForm();
+                atribuiDadosClienteComponente();
+                btnExcluir.Visible = true;
+            }
+        }
 
+        private void prepararAtualizarForm()
+        {
+            _cliente = _business.buscaCliente(_idCliente);
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
@@ -58,17 +61,32 @@ namespace CadastroReval.View
 
         private void atribuiDadosCliente()
         {
-            _cliente.NomeCliente = txtNomeCliente.Text;
-            _cliente.CPF = mtbCPF.Text;
-            _cliente.RG = mtbRG.Text;            
-            _cliente.Email = txtEmail.Text;
+            _cliente.NomeCliente    = txtNomeCliente.Text;
+            _cliente.CPF            = mtbCPF.Text;
+            _cliente.RG             = mtbRG.Text;            
+            _cliente.Email          = txtEmail.Text;
             _cliente.DataNascimento = dtpNascimento.MinDate;
-            _cliente.CEP = mtbCEP.Text;
-            _cliente.Telefone = mtbTelefone.Text;
-            _cliente.Bairro = txtBairro.Text;
-            _cliente.Cidade = txtCidade.Text;
-            _cliente.Estado = txtEstado.Text;
-            _cliente.Observacao = txtObs.Text;
+            _cliente.CEP            = mtbCEP.Text;
+            _cliente.Telefone       = mtbTelefone.Text;
+            _cliente.Bairro         = txtBairro.Text;
+            _cliente.Cidade         = txtCidade.Text;
+            _cliente.Estado         = txtEstado.Text;
+            _cliente.Observacao     = txtObs.Text;
+        }
+
+        private void atribuiDadosClienteComponente()
+        {
+            txtNomeCliente.Text     = _cliente.NomeCliente;
+            mtbCPF.Text             = _cliente.CPF;
+            mtbRG.Text              = _cliente.RG;
+            txtEmail.Text           = _cliente.Email;
+            dtpNascimento.MinDate   = _cliente.DataNascimento;
+            mtbCEP.Text             = _cliente.CEP;
+            mtbTelefone.Text        = _cliente.Telefone;
+            txtBairro.Text          = _cliente.Bairro;
+            txtCidade.Text          = _cliente.Cidade;
+            txtEstado.Text          = _cliente.Estado;
+            txtObs.Text             = _cliente.Observacao;
         }
 
         private bool validaDadosCliente()
@@ -110,6 +128,11 @@ namespace CadastroReval.View
             }
 
             return true;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tem certeza que deseja excluir esse cliente?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
         }
     }
 }

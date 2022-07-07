@@ -33,7 +33,19 @@ namespace CadastroReval.Business
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao executar consulta: " + ex);
+                throw new Exception("Erro ao executar método" + ex);
+            }
+        }
+
+        public Cliente buscaCliente(int idCliente)
+        {
+            try
+            {
+                return _service.buscaCliente(idCliente);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao executar método: " + ex);
             }
         }
     }

@@ -47,5 +47,15 @@ namespace CadastroReval.View
         {
             carregaGrid();
         }
+
+        private void dgvCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                int idCliente = Convert.ToInt32(dgvCliente.Rows[e.RowIndex].Cells[0].Value);
+                frmCadastraAtualizaCliente frmCadastraAtualizaCliente = new frmCadastraAtualizaCliente(idCliente);
+                frmCadastraAtualizaCliente.ShowDialog();
+            }
+        }
     }
 }
