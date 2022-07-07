@@ -55,6 +55,7 @@ namespace CadastroReval.View
                 int idCliente = Convert.ToInt32(dgvCliente.Rows[e.RowIndex].Cells[0].Value);
                 frmCadastraAtualizaCliente frmCadastraAtualizaCliente = new frmCadastraAtualizaCliente(idCliente);
                 frmCadastraAtualizaCliente.ShowDialog();
+                carregaGrid();
             }
         }
     }

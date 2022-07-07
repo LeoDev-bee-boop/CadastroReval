@@ -132,7 +132,13 @@ namespace CadastroReval.View
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tem certeza que deseja excluir esse cliente?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Tem certeza que deseja excluir esse cliente?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            
+            if(result == DialogResult.Yes)
+            {
+                _business.excluirCliente(_cliente.IdCliente);
+                this.Close();
+            }
         }
     }
 }

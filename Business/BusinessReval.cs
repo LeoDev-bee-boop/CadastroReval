@@ -48,5 +48,17 @@ namespace CadastroReval.Business
                 throw new Exception("Erro ao executar método: " + ex);
             }
         }
+
+        public void excluirCliente(int idCliente)
+        {
+            try
+            {
+                _service.excluirCliente(idCliente);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao executar método: " + ex);
+            }
+        }
     }
 }

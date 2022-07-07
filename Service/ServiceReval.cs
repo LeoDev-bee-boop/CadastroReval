@@ -38,7 +38,7 @@ namespace CadastroReval.Service
                 //Conecar com o banco
                 _cmd.Connection = _con.conectar();
                 //Executando consulta
-                _reader = _cmd.ExecuteReader();
+                _cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -151,6 +151,32 @@ namespace CadastroReval.Service
                     a = cliente;
                 }
                 return a;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao executar consulta: " + ex);
+            }
+            finally
+            {
+                //desconectando
+                _con.desconectar();
+            }
+        }
+
+        public void excluirCliente(int idCliente)
+        {
+            //Comando sql
+            _cmd.CommandText = @"DELETE FROM CLIENTE WHERE ID_CLIENTE = @ID_CLIENTE";
+
+            //Adicionado parametros
+            _cmd.Parameters.AddWithValue("@ID_CLIENTE", idCliente);
+
+            try
+            {
+                //Conecar com o banco
+                _cmd.Connection = _con.conectar();
+                //Executando consulta
+                _cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
