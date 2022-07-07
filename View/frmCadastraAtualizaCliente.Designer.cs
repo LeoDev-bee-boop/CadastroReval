@@ -228,6 +228,7 @@ namespace CadastroReval.View
             this.btnCancelar.TabIndex = 27;
             this.btnCancelar.Text = "Excluir";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Visible = false;
             // 
             // mtbCPF
             // 
