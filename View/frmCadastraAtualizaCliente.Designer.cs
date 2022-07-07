@@ -272,6 +272,7 @@ namespace CadastroReval.View
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Visible = false;
             // 
             // frmCadastraAtualizaCliente
             // 
