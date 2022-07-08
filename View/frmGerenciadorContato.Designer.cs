@@ -35,7 +35,7 @@ namespace CadastroReval.View
             this.colNOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.butRefresh = new System.Windows.Forms.Button();
+            this.butNovoCliente = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
@@ -91,20 +91,20 @@ namespace CadastroReval.View
             this.colTEL.Name = "colTEL";
             this.colTEL.ReadOnly = true;
             // 
-            // butRefresh
+            // butNovoCliente
             // 
-            this.butRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.butRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.butRefresh.BackgroundImage = global::CadastroReval.Properties.Resources.adicionar;
-            this.butRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.butRefresh.FlatAppearance.BorderSize = 0;
-            this.butRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butRefresh.Location = new System.Drawing.Point(763, 12);
-            this.butRefresh.Name = "butRefresh";
-            this.butRefresh.Size = new System.Drawing.Size(25, 25);
-            this.butRefresh.TabIndex = 1;
-            this.butRefresh.UseVisualStyleBackColor = false;
-            this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
+            this.butNovoCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.butNovoCliente.BackColor = System.Drawing.Color.Transparent;
+            this.butNovoCliente.BackgroundImage = global::CadastroReval.Properties.Resources.adicionar;
+            this.butNovoCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butNovoCliente.FlatAppearance.BorderSize = 0;
+            this.butNovoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butNovoCliente.Location = new System.Drawing.Point(763, 12);
+            this.butNovoCliente.Name = "butNovoCliente";
+            this.butNovoCliente.Size = new System.Drawing.Size(25, 25);
+            this.butNovoCliente.TabIndex = 1;
+            this.butNovoCliente.UseVisualStyleBackColor = false;
+            this.butNovoCliente.Click += new System.EventHandler(this.butNovoCliente_Click);
             // 
             // btnRefresh
             // 
@@ -127,7 +127,7 @@ namespace CadastroReval.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.butRefresh);
+            this.Controls.Add(this.butNovoCliente);
             this.Controls.Add(this.dgvCliente);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(300, 160);
@@ -143,7 +143,7 @@ namespace CadastroReval.View
         #endregion
 
         private System.Windows.Forms.DataGridView dgvCliente;
-        private System.Windows.Forms.Button butRefresh;
+        private System.Windows.Forms.Button butNovoCliente;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNOME;

@@ -23,8 +23,7 @@ namespace CadastroReval.View
 
         private void butRefresh_Click(object sender, EventArgs e)
         {
-            frmCadastraAtualizaCliente cadastra = new frmCadastraAtualizaCliente();
-            cadastra.ShowDialog();
+            
         }
 
         private void frmGerenciadorContato_Load(object sender, EventArgs e)
@@ -57,6 +56,13 @@ namespace CadastroReval.View
                 frmCadastraAtualizaCliente.ShowDialog();
                 carregaGrid();
             }
+        }
+
+        private void butNovoCliente_Click(object sender, EventArgs e)
+        {
+            frmCadastraAtualizaCliente cadastra = new frmCadastraAtualizaCliente();
+            cadastra.ShowDialog();
+            carregaGrid();
         }
     }
 }

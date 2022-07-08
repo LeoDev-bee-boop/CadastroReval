@@ -122,7 +122,14 @@ namespace CadastroReval.View
             }
             if (string.IsNullOrEmpty(mtbCPF.Text.Trim()))
             {
+               mtbCPF.TextMaskFormat =  MaskFormat.ExcludePromptAndLiterals;
+
                 MessageBox.Show("Insira o CPF do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (string.IsNullOrEmpty(mtbRG.Text.Trim()))
+            {
+                MessageBox.Show("Insira o nome do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(txtEmail.Text.Trim()))
